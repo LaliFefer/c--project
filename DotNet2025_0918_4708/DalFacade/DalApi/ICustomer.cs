@@ -1,7 +1,6 @@
-﻿namespace DalApi;
-using DO;
+﻿using DO;    
 using System.Collections.Generic;
-
+namespace DalApi;
 public interface ICustomer: ICrud<Customer>
 {
 }

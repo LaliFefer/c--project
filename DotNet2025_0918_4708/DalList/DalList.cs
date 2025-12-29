@@ -1,9 +1,10 @@
 ﻿using System;
+using DalApi;
 
 public class DalList
 {
-	public Class1()
-	{
-		
-	}
+	public ISale Sale => SaleImplementation();
+    public IProduct Product => ProductImplementation();
+    public ICustomer Customer => CustomerImplementation();
+    
 }

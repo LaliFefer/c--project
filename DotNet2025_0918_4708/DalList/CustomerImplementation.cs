@@ -1,33 +1,67 @@
-﻿namespace Dal;
-using DO;
+﻿using System;
+using System.Collections.Generic;
 using DalApi;
 
-public class Customer : ICustomer
+namespace Dal
 {
-    public Class1()
+    internal class Customer : ICustomer
     {
-        int Create(Customer customer)
+        public int Create(Customer customer)
         {
-            if (customer.IdNumber != null)
-                throw new ArgumentException("existing ID");
-        }
-        Customer? Read(int id)
-        {
-            if (id != null)
-                throw new ArgumentException("ID not found");
-            return new Customer();
-        }
-        List<Customer> ReadAll()
-        {
-            return new List<Customer>();
-        }
-        void Update(Customer customer)
-        {
-            
-        }
-        void Delete(int id)
-        {
+            foreach (var c in customers)
+            {
+                if (c?.Id== customer.Id)
+                 throw new IdAlreadyExistsException("The ID " + id + " already exists.");
+            }
 
+            Customer cust = item with { Id = id };
+            customers[StaticValue] = cust;
+            return cust.id;
+        }
+
+        public Customer? Read(int id)
+        {
+           
+            foreach (var c in customers)
+            {
+                if (c?.Id == Id)
+                    return c;
+             
+            }
+            throw new IdNotFoundException();
+        }
+
+        public List<Customer> ReadAll()
+        {
+            return new List<Customer>(customers.Values);
+        }
+
+        public void Update(Customer customer)
+        {
+            foreach (var c in customers)
+            {
+                if (customer.id==c?.id)
+                {
+                    Delete(c.Id);
+                    Customers.Add(customer);
+                }
+            }
+            throw new IdNotFoundException();
+        }
+
+        public void Delete(int id)
+        {
+            foreach (var c in customers)
+            {
+                if (customer.id == c?.id)
+                {
+                    Delete(c.Id);
+                }
+                throw new IdNotFoundException();
+            }
+           
+
+            customers.Remove(id);
         }
     }
 }

@@ -4,26 +4,14 @@ namespace Dal;
 
 internal static class DataSource;
 {
-internal static List<Product> Products { get; } = new()
-{
-    new Product(), // כל השדות יקבלו ערכי ברירת מחדל
-    new Product(),
-    new Product()
-};
-internal static List<Order> Orders { get; } = new()
-{
-    new Order(),
-    new Order()
-}
-internal static List<Customer> Customers { get; } = new()
-{
-    new Customer(),
-    new Customer()
-};
+internal static List<Product?> Products = new List<Product>();
+internal static List<Order?> Orders = new List<Order>();
+internal static List<Customer?> Customers = new List<Customer>();
+
 internal static class config
 {
-    internal const int initialProductId = 1000;
-    internal const int initialOrderId = 5000;
-    internal const int initialCustomerId = 2000;
+    internal const int initialId = 1000;
+    static private statiValue=initialId;
+    public static int StaticValue { get { return statiValue++; } }
 }
 }
