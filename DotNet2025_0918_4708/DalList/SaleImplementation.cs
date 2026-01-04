@@ -1,56 +1,51 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using DalApi;
 using DO;
+using static Dal.DataSource;
 
 namespace Dal;
 
 internal class SaleImplementation : ISale
 {
-
     public int Create(Sale sale)
     {
-        if (DataSource.Sales.Any(s => s?.Id == sale.Id))
+        if (Sales.Any(s => s?.Id == sale.Id))
             throw new IdAlreadyExistsException("The ID " + sale.Id + " already exists.");
 
-        sale.Id = DataSource.config.StaticValue;
-        DataSource.Sales.Add(sale);
+        sale = sale with { Id = sale.Id == 0 ? config.StaticValue : sale.Id };
+        Sales.Add(sale);
         return sale.Id;
     }
 
     public Sale? Read(int id)
     {
-        foreach (var sale in DataSource.Sales)
-        {
-            if (sale?.Id == id)
-                return sale;
-        }
-        throw new IdNotFoundException();
+        var sale = Sales.FirstOrDefault(s => s?.Id == id);
+        if (sale == null)
+            throw new IdNotFoundException();
+        return sale;
     }
 
     public List<Sale> ReadAll()
     {
-        return new List<Sale>(DataSource.Sales.Where(s => s != null));
+        return Sales.Where(s => s != null).ToList()!;
     }
 
     public void Update(Sale sale)
     {
-        for (int i = 0; i < DataSource.Sales.Count; i++)
-        {
-            if (DataSource.Sales[i]?.Id == sale.Id)
-            {
-                DataSource.Sales[i] = sale;
-                return;
-            }
-        }
-        throw new IdNotFoundException();
+        var index = Sales.FindIndex(s => s?.Id == sale.Id);
+        if (index == -1)
+            throw new IdNotFoundException();
+
+        Sales[index] = sale;
     }
 
     public void Delete(int id)
     {
-        var sale = DataSource.Sales.FirstOrDefault(s => s?.Id == id);
+        var sale = Sales.FirstOrDefault(s => s?.Id == id);
         if (sale == null)
             throw new IdNotFoundException();
 
-        DataSource.Sales.Remove(sale);
+        Sales.Remove(sale);
     }
 }

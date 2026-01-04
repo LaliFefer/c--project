@@ -11,9 +11,11 @@ internal class ProductImplementation : IProduct
         if (DataSource.Products.Any(p => p?.Id == product.Id))
             throw new IdAlreadyExistsException("The ID " + product.Id + " already exists.");
 
-        product.Id= DataSource.config.StaticValue;
-        DataSource.Products.Add(product);
-        return product.Id;
+        int newId = DataSource.config.StaticValue;
+        Product newProduct = product with { Id = newId };
+
+        DataSource.Products.Add(newProduct);
+        return newId;
     }
 
     public Product? Read(int id)

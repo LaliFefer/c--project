@@ -1,4 +1,5 @@
-﻿using DalApi;
+﻿using System.Linq;
+using DalApi;
 using DO;
 using static Dal.DataSource;
 
@@ -6,50 +7,45 @@ namespace Dal;
 
 internal class CustomerImplementation : ICustomer
 {
-
     public int Create(Customer customer)
     {
-        if (DataSource.Customers.Any(c => c?.Id == customer.Id))
+        if (Customers.Any(c => c?.Id == customer.Id))
             throw new IdAlreadyExistsException("The ID " + customer.Id + " already exists.");
-        
-        customer.Id = DataSource.config.StaticValue;
-        DataSource.Customers.Add(customer);
+
+        // שימוש ב-ID האוטומטי רק אם ה-ID שהתקבל הוא 0 (או ערך ברירת מחדל אחר)
+        customer.Id = customer.Id == 0 ? config.StaticValue : customer.Id;
+        Customers.Add(customer);
         return customer.Id;
     }
 
     public Customer? Read(int id)
     {
-        foreach (var c in DataSource.Customers)
-        {
-            if (c?.Id == id)
-                return c;
-        }
-        throw new IdNotFoundException();
+        var customer = Customers.FirstOrDefault(c => c?.Id == id);
+        if (customer == null)
+            throw new IdNotFoundException();
+        return customer;
     }
+
     public List<Customer> ReadAll()
     {
-        return new List<Customer>(DataSource.Customers);
+        return Customers.Where(c => c != null).ToList()!;
     }
 
     public void Update(Customer customer)
     {
-        for (int i = 0; i < DataSource.Customers.Count; i++)
-        {
-            if (customer.Id == DataSource.Customers[i]?.Id)
-            {
-                DataSource.Customers[i] = customer;
-                return;
-            }
-        }
-        throw new IdNotFoundException();
+        var index = Customers.FindIndex(c => c?.Id == customer.Id);
+        if (index == -1)
+            throw new IdNotFoundException();
+
+        Customers[index] = customer;
     }
 
     public void Delete(int id)
     {
-        var customer = DataSource.Customers.FirstOrDefault(c => c?.Id == id);
+        var customer = Customers.FirstOrDefault(c => c?.Id == id);
         if (customer == null)
             throw new IdNotFoundException();
 
-        DataSource.Customers.Remove(customer);
+        Customers.Remove(customer);
     }
 }
