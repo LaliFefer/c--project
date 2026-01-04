@@ -10,9 +10,11 @@ namespace DelTest;
 class Program
 {
     // הגדרת משתנה סטטי לממשק הגישה לנתונים, הממומש על ידי DalList
+
     private static IDal s_dal = new DalList();
     static void Main()
     {
+
         try
         {
             // אתחול הנתונים הראשוניים

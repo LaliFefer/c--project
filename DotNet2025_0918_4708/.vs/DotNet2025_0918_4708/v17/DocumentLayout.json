@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\u05DC\u05DC\u05D9\\Documents\\GitHub\\c--project\\DotNet2025_0918_4708\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27479026-8EF2-4AFC-B286-34268F5BCA34}|DalList\\DalList.csproj|c:\\users\\\u05DC\u05DC\u05D9\\documents\\github\\c--project\\dotnet2025_0918_4708\\dallist\\dallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27479026-8EF2-4AFC-B286-34268F5BCA34}|DalList\\DalList.csproj|solutionrelative:dallist\\dallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CB95B8CF-D74B-4558-AF63-EFC2B7A1FE6D}|DalTest\\DalTest.csproj|c:\\users\\\u05DC\u05DC\u05D9\\documents\\github\\c--project\\dotnet2025_0918_4708\\daltest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB95B8CF-D74B-4558-AF63-EFC2B7A1FE6D}|DalTest\\DalTest.csproj|solutionrelative:daltest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27479026-8EF2-4AFC-B286-34268F5BCA34}|DalList\\DalList.csproj|c:\\users\\\u05DC\u05DC\u05D9\\documents\\github\\c--project\\dotnet2025_0918_4708\\dallist\\dallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27479026-8EF2-4AFC-B286-34268F5BCA34}|DalList\\DalList.csproj|solutionrelative:dallist\\dallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40753B19-40A6-44E0-B74B-16A17F1728E9}|DalFacade\\DalFacade.csproj|c:\\users\\\u05DC\u05DC\u05D9\\documents\\github\\c--project\\dotnet2025_0918_4708\\dalfacade\\dalapi\\icrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DalList.cs",
               "DocumentMoniker": "C:\\Users\\\u05DC\u05DC\u05D9\\Documents\\GitHub\\c--project\\DotNet2025_0918_4708\\DalList\\DalList.cs",
               "RelativeDocumentMoniker": "DalList\\DalList.cs",
@@ -119,13 +119,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u05DC\u05DC\u05D9\\Documents\\GitHub\\c--project\\DotNet2025_0918_4708\\DalTest\\Program.cs",
               "RelativeDocumentMoniker": "DalTest\\Program.cs",
               "ToolTip": "C:\\Users\\\u05DC\u05DC\u05D9\\Documents\\GitHub\\c--project\\DotNet2025_0918_4708\\DalTest\\Program.cs",
               "RelativeToolTip": "DalTest\\Program.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAIAwwAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-29T16:51:20.936Z",
               "EditorCaption": ""
