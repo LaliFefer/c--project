@@ -34,3 +34,15 @@ C:\Users\user\Desktop\programs\B\c#\c# project\c--project\c--project-\DotNet2025
 C:\Users\user\Desktop\programs\B\c#\c# project\c--project\c--project-\DotNet2025_0918_4708\DalFacade\obj\Debug\refint\DalFacade.dll
 C:\Users\user\Desktop\programs\B\c#\c# project\c--project\c--project-\DotNet2025_0918_4708\DalFacade\obj\Debug\DalFacade.pdb
 C:\Users\user\Desktop\programs\B\c#\c# project\c--project\c--project-\DotNet2025_0918_4708\DalFacade\obj\Debug\ref\DalFacade.dll
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\bin\DalFacade.deps.json
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\bin\DalFacade.dll
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\bin\DalFacade.pdb
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\DalFacade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\DalFacade.AssemblyInfoInputs.cache
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\DalFacade.AssemblyInfo.cs
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\DalFacade.csproj.CoreCompileInputs.cache
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\DalFacade.sourcelink.json
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\DalFacade.dll
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\refint\DalFacade.dll
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\DalFacade.pdb
+C:\Users\ללי\Documents\GitHub\c--project\DotNet2025_0918_4708\DalFacade\obj\Debug\ref\DalFacade.dll
